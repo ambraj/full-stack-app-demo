@@ -15,9 +15,27 @@ export const HomePage = () => {
     fetchServiceData();
   }, []);
 
+  const calculate = () => {
+    console.log("button clicked...")
+  }
+
   return (
     <div>
       <h1>{isLoaded ? serviceData : <h3>fetching data .....</h3>}</h1>
+
+      <h1>Calculator App</h1>
+
+      <div>
+        <span>Number1  </span>
+        <input type="text"/>
+      </div>
+      <div>
+        <span>Number2  </span>
+        <input type="text"/>
+      </div>
+      <div>
+        <button onClick={calculate}>Sum</button>
+      </div>
     </div>
   );
 };
